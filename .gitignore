@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/FinalHomeWorkCS/v15
+/obj/Debug
+/FinalHomeWorkCS.sln
+/FinalHomeWorkCS.csproj
+/Properties/AssemblyInfo.cs
