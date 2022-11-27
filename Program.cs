@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FinalHomeWorkCS
 {
@@ -26,25 +22,21 @@ namespace FinalHomeWorkCS
 
         static string[] FilterArray(string[] input, int stringLength)
         {
-            string[] tempArray = new string[input.Length];
+            int[] tempArray = new int[input.Length];
             int count = 0;
             for (int i = 0; i < input.Length; i++)
             {
                 if(input[i].Length <= stringLength)
                 {
+                    tempArray[count] = i;
                     count++;
                 }
             }
 
             string[] output = new string[count];
-            int counter = 0;
-            for (int i = 0; i < input.Length; i++)
+            for (int i = 0; i < count; i++)
             {
-                if (input[i].Length <= stringLength)
-                {
-                    output[counter] = input[i];
-                    counter++;
-                }
+                output[i] = input[tempArray[i]];
             }
 
             return output;
